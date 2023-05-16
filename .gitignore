@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+
+
+#Distribution / packing
+.Python
+build
+downloads/
+lib/
+lib64/
+parts/
+sdist/
+.installed.cfg
+*.egg
+
+#serverless directories
+.serverless
+
+# Also, we can write the files which we want to ignore(not to push to git hub) in the future
+
+
+.venv
+

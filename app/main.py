@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from database.database_session import db
 from libraries.authentication import *
+from database.create_table import create_database_table
 
 docs_url ="/docs"
 app = FastAPI(docs_url= docs_url, debug=True)
@@ -16,11 +17,12 @@ app.add_middleware(
     allow_methods = ["*"],
     allow_headers = ["*"],
 )
-@app.on_event("start_up")
+@app.on_event("startup")
 def start():
     if db.is_closed():
         db.connect()
     
+    # create_database_table()
     session_open()
 
 @app.on_event("shutdown")

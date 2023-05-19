@@ -4,6 +4,7 @@ from database.models.my_profile import Profile
 def create_database_table():
     try:
         db.create_tables([Profile])
+        print("table created")
     
     except:
         print("error while creating the table")

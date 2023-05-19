@@ -8,3 +8,10 @@ Steps to initiate this project
 3. add all the libraries we are using in the project into the docker file.
 4. Now download the postgres on the server to intialize the database or else for local download postgresql and connect the local setup
 5. After connection with the postgresql add it to table plus or postico for better visual and understanding.
+
+# to activate virtual environment run 
+
+# python -m venv myenv
+# myenv\Scripts\activate 
+# source myenv/bin/activate 
+# add your special requirements here

@@ -21,5 +21,6 @@ sdist/
 # Also, we can write the files which we want to ignore(not to push to git hub) in the future
 
 
+# Virtual environment
 .venv
-
+myenv

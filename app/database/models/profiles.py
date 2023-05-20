@@ -8,11 +8,12 @@ class BaseModel(Model):
         database = db
 
 class Profile(BaseModel):
-    userid = IntegerField(primary_key = True)
+    # userid = AutoField(primary_key = True)
+    id = PrimaryKeyField()
     username = CharField(unique=True)
     about = TextField()
-    first_name = CharField(unique=True)
-    last_name = CharField(unique=True)
+    first_name = CharField()
+    last_name = CharField()
     created_date = DateTimeField(default=datetime.datetime.now)
     updated_date = DateTimeField(default=datetime.datetime.now)
 

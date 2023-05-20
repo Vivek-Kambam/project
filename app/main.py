@@ -5,7 +5,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from database.database_session import db
 from libraries.authentication import *
-from database.create_table import create_database_table
+# from database.create_table import create_database_table
+from database.interactions.get_all_user_profiles import get_all_user_profiles
+from database.interactions.create_user import create_user_profile
+from database.params import *
 
 docs_url ="/docs"
 app = FastAPI(docs_url= docs_url, debug=True)
@@ -37,3 +40,10 @@ def welcome():
     return {"Project": "Hello welcome to the new Project"}
 
 
+@app.get('/get_all_profiles')
+def get_all_profiles():
+    return get_all_user_profiles()
+
+@app.post('/create_user')
+def create_user(user_data: UserProfile):
+    return create_user_profile(user_data)

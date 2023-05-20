@@ -1,5 +1,5 @@
 from database.database_session import db
-from database.models.my_profile import Profile
+from database.models.profiles import Profile
 
 def create_database_table():
     try:

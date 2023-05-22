@@ -8,7 +8,6 @@ class BaseModel(Model):
         database = db
 
 class Profile(BaseModel):
-    # userid = AutoField(primary_key = True)
     id = PrimaryKeyField()
     username = CharField(unique=True)
     about = TextField()

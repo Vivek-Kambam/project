@@ -10,7 +10,7 @@ def get_all_user_profiles():
         data = {
             'id':i.id,
             'username': i.username,
-            'name': i.first_name + i.last_name
+            'name': i.first_name + ' ' + i.last_name
         }
         user_data.append(data)
 

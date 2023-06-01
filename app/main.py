@@ -29,7 +29,7 @@ def start():
     
     # create_database_table()
     # create_migration()
-    run_migration()
+    # run_migration()
     session_open()
 
 @app.on_event("shutdown")

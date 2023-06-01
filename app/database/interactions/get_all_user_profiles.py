@@ -1,5 +1,6 @@
 from database.models.profiles import Profile
 from peewee import *
+import pandas as pd
 
 
 def get_all_user_profiles():
@@ -13,6 +14,12 @@ def get_all_user_profiles():
             'name': i.first_name + ' ' + i.last_name
         }
         user_data.append(data)
+
+    df = pd.DataFrame.from_dict(user_data)
+
+    print (df)
+
+    df.to_excel('profile.xlsx')
 
 
 

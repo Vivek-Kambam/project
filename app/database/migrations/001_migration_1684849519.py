@@ -39,8 +39,8 @@ SQL = pw.SQL
 def migrate(migrator: Migrator, database: pw.Database, *, fake=False):
     """Write your migrations here."""
     migrator.add_columns(Profile, email_address = CharField(null=True))
-    migrator.add_columns(Profile, mobile_number = IntegerField(null=True))
-    migrator.add_columns(Profile, country_code = CharField(null=True, max_length = 3))
+    migrator.add_columns(Profile, mobile_number = BigIntegerField(null=True))
+    migrator.add_columns(Profile, country = CharField(null=True, max_length = 3))
     migrator.add_columns(Profile, address = CharField(null=True))
 
     

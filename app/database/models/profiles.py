@@ -13,6 +13,10 @@ class Profile(BaseModel):
     about = TextField()
     first_name = CharField()
     last_name = CharField()
+    email_address = CharField(null=True)
+    mobile_number = BigIntegerField(null=True)
+    country = CharField(null=True, max_length = 3)
+    address = CharField(null=True)
     created_date = DateTimeField(default=datetime.datetime.now)
     updated_date = DateTimeField(default=datetime.datetime.now)
 

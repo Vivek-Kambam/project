@@ -8,10 +8,10 @@ class UserProfile(BaseModel):
     about : str = None
     first_name :str  
     last_name :str
-    email_address : str
-    mobile_number : int
-    country_code : str
-    address : str
+    email_address : str = None
+    mobile_number : int = None
+    country_code : str = None
+    address : str = None
 
     # def __init__(self, usename, about, first_name, last_name) -> None:
     #     username = self.username

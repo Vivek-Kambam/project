@@ -6,8 +6,8 @@ from fastapi import FastAPI
 from database.database_session import db
 from libraries.authentication import *
 # from database.create_table import create_database_table
-from database.migrations.migrate import create_migration
-from database.migrations.migrate import run_migration
+# from database.migrations.migrate import create_migration
+# from database.migrations.migrate import run_migration
 from database.interactions.get_all_user_profiles import get_all_user_profiles
 from database.interactions.create_user import create_user_profile
 from database.params import *

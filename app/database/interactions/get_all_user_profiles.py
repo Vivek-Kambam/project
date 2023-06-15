@@ -15,11 +15,11 @@ def get_all_user_profiles():
         }
         user_data.append(data)
 
-    df = pd.DataFrame.from_dict(user_data)
+    # df = pd.DataFrame.from_dict(user_data)
 
-    print (df)
+    # print (df)
 
-    df.to_excel('profile.xlsx')
+    # df.to_excel('profile.xlsx')
 
 
 

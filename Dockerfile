@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN pip3 install --upgrade pip
 
-RUN pip3 install fast-api peewee requests python-dotenv uvicorn peewee-migrate pandas openpyxl
+RUN pip3 install fastapi peewee requests python-dotenv uvicorn peewee-migrate pandas psycopg2-binary openpyxl
 
 
 EXPOSE 8000

@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from database.interactions.get_all_user_profiles import get_all_user_profiles
-from database.interactions.create_user import create_user_profile
+from database.interactions.profile.get_all_user_profiles import get_all_user_profiles
+from database.interactions.profile.create_user import create_user_profile
 from routers.profile_params import *
 
 profile_router = APIRouter()

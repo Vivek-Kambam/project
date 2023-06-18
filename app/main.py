@@ -8,9 +8,8 @@ from libraries.authentication import *
 # from database.create_table import create_database_table
 # from database.migrations.migrate import create_migration
 # from database.migrations.migrate import run_migration
-from database.interactions.get_all_user_profiles import get_all_user_profiles
-from database.interactions.create_user import create_user_profile
-from database.params import *
+from routers.telegram_routes import telegram_router
+from routers.profiles_routes import profile_router
 
 docs_url ="/docs"
 app = FastAPI(docs_url= docs_url, debug=True)
@@ -44,10 +43,6 @@ def welcome():
     return {"Project": "Hello welcome to the new Project"}
 
 
-@app.get('/get_all_profiles')
-def get_all_profiles():
-    return get_all_user_profiles()
 
-@app.post('/create_user')
-def create_user(user_data: UserProfile):
-    return create_user_profile(user_data)
+app.include_router(prefix="/profile_route", router=profile_router)
+app.include_router(prefix="/telegram_route", router=telegram_router)

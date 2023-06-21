@@ -15,3 +15,5 @@ Steps to initiate this project
 # myenv\Scripts\activate 
 # source myenv/bin/activate 
 # add your special requirements here
+
+https://telegram-bot-sdk.readme.io/reference/getupdates

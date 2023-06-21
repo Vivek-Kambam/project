@@ -9,6 +9,6 @@ RUN pip3 install --upgrade pip
 RUN pip3 install fastapi peewee requests python-dotenv uvicorn peewee-migrate pandas psycopg2-binary openpyxl telethon telebot python-telegram-bot telegram
 
 
-EXPOSE 8000
+EXPOSE 5000
 
 CMD [ "sh", "deploy.sh" ]

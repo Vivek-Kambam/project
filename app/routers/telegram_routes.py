@@ -19,6 +19,5 @@ def post_bot_message():
 
 
 @telegram_router.get('/get_unread_messages_from_telegram')
-def get_unread_messages_from_telegram(username: str, phone: int):
-    print("+++++++++++++++++++++++++++++++++++++++++++")
-    return get_unread_messages_from_telegram_using_user(username, phone)
+async def get_unread_messages_from_telegram(username: str):
+    return await get_unread_messages_from_telegram_using_user(username)

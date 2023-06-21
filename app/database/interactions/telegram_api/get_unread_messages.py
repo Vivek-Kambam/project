@@ -22,14 +22,10 @@ class DateTimeEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, o)
 
 
-def get_unread_messages_from_telegram_using_user(username, phone):
-    return main(username,phone)
-
-async def main(username, phone):
-    print("------------------------------------")
+async def get_unread_messages_from_telegram_using_user(username):
+    phone = +919393936118
     client = TelegramClient(username, api_id, api_hash)
     await client.start()
-    print("Client Created")
     # Ensure you're authorized
     if await client.is_user_authorized() == False:
         await client.send_code_request(phone)
@@ -39,9 +35,8 @@ async def main(username, phone):
             await client.sign_in(password=input('Password: '))
 
     me = await client.get_me()
-    print("okayyyyy")
+
     user_input_channel = input('enter entity(telegram URL or entity id):')
-    # https://t.me/iamprasadtech
 
     if user_input_channel.isdigit():
         entity = PeerChannel(int(user_input_channel))
@@ -80,6 +75,4 @@ async def main(username, phone):
 
     with open('channel_messages.json', 'w') as outfile:
         json.dump(all_messages, outfile, cls=DateTimeEncoder)
-
-# with client:
-#     client.loop.run_until_complete(main(phone))
+        # Instead of copying all messages to json file we will dump all the data into our database.

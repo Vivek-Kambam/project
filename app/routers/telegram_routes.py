@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from database.interactions.telegram_api.send_message_via_bot import telegram_message
-from database.interactions.telegram_api.post_messages_to_users import post_messages_to_users
+from database.interactions.telegram_api.post_messages_to_users_and_channels import post_messages_to_users
 from database.interactions.telegram_api.get_unread_messages import get_unread_messages_from_telegram_using_user
 
 

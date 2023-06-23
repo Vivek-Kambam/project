@@ -17,7 +17,7 @@ def post_messages_to_users(message_to_channel, message_to_users):
                 result = requests.get(url)
                 result_ = result.json()
                 channel_list.append(every_user["channel_post"]["sender_chat"]['id'])
-            if every_user.get("message") and every_user["message"]["from"]['id'] == 1193552586 and message_to_users is not None and every_user["message"]["from"]['id'] not in user_list:
+            if every_user.get("message") and every_user["message"]["from"]['id'] == 836498430 and message_to_users is not None and every_user["message"]["from"]['id'] not in user_list:
                 url = "https://api.telegram.org/bot" + BOT_AUTH_TOKEN + "/sendMessage?chat_id=" + str(every_user["message"]["from"]['id']) + "&text=" + message_to_users
                 result = requests.get(url)
                 result_ = result.json()

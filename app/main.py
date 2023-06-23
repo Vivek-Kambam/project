@@ -1,4 +1,4 @@
-print("Hello Project")
+print("Hello Vicky")
 # from fastapi import
 from config import env
 from fastapi.middleware.cors import CORSMiddleware
